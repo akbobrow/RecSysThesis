@@ -1,0 +1,15 @@
+The following is an example of the code used in RStudio to collect the p-values.
+This example takes user results from within survey 1 for the textual explanatory interface design and the visual explanatory interface design, comparing them to one another.
+
+wilcox.test(s_159 ~ Group, data=s1textviz, name=c('Text','Viz'), conf.level = 0.95, alternative = "two.sided")
+wilcox.test(s_160 ~ Group, data=s1textviz, name=c('Text','Viz'), conf.level = 0.95, alternative = "two.sided")
+etc etc...
+
+s_159 and s_160 etc refers to question numbers 159 and 160 found in the csv files. 
+(Note: s stands for spørsmål which means question in Norwegian).
+
+Group refers to user responses for either the 'Text' or 'Viz' group.
+'Text' refers to the textual explanatory interface and 'Viz' refers to the visual explanatory interface.
+
+The name of the file uploaded to RStudio with raw data is called s1textviz.
+This csv file has also been uploaded to the reposity as an example file.
